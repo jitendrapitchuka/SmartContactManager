@@ -44,34 +44,34 @@ public class SecurityConfig {
         });
 
        
-        // httpSecurity.formLogin(formLogin -> {
+        httpSecurity.formLogin(formLogin -> {
 
         //     //
-        //     formLogin.loginPage("/login");
-        //     formLogin.loginProcessingUrl("/authenticate");
-        //     formLogin.successForwardUrl("/user/profile");
+             formLogin.loginPage("/login");
+             formLogin.loginProcessingUrl("/authenticate");
+            formLogin.successForwardUrl("/user/profile");
         //     // formLogin.failureForwardUrl("/login?error=true");
         //     // formLogin.defaultSuccessUrl("/home");
-        //     formLogin.usernameParameter("email");
-        //     formLogin.passwordParameter("password");
+             formLogin.usernameParameter("email");
+             formLogin.passwordParameter("password");
 
-           
-        //     formLogin.failureHandler(authFailtureHandler);
+            
+           // formLogin.failureHandler(authFailureHandler);
 
-        // });
+        });
 
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
         // oauth configurations
 
-        // httpSecurity.oauth2Login(oauth -> {
-        //     oauth.loginPage("/login");
-        //     oauth.successHandler(handler);
-        // });
+        httpSecurity.oauth2Login(oauth -> {
+            oauth.loginPage("/login");
+           // oauth.successHandler(handler);
+        });
 
-        // httpSecurity.logout(logoutForm -> {
-        //     logoutForm.logoutUrl("/do-logout");
-        //     logoutForm.logoutSuccessUrl("/login?logout=true");
-        // });
+        httpSecurity.logout(logoutForm -> {
+            logoutForm.logoutUrl("/do-logout");
+            logoutForm.logoutSuccessUrl("/login?logout=true");
+        });
 
         return httpSecurity.build();
 
