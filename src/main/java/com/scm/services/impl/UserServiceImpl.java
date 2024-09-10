@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService{
 
     private Logger logger=LoggerFactory.getLogger(UserServiceImpl.class);
 
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Override
@@ -33,6 +34,9 @@ public class UserServiceImpl implements UserService{
         user.setUserId(userId);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+
+        
+
         user.setRoleList(List.of(AppConstants.ROLE_USER));
 
         return userRepo.save(user);
@@ -91,10 +95,9 @@ public class UserServiceImpl implements UserService{
        return userRepo.findAll();
     }
 
-    // @Override
-    // public User getUserByEmail(String email) {
-    //     // TODO Auto-generated method stub
-    //     throw new UnsupportedOperationException("Unimplemented method 'getUserByEmail'");
-    // }
+    @Override
+    public User getUserByEmail(String email) {
+        return userRepo.findByEmail(email).orElse(null);
+    }
 
 }
