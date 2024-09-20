@@ -43,9 +43,6 @@ public class ContactForm {
 
     private String linkedInLink;
 
-    // annotation create karenge jo file validate
-    // size
-    // resolution
 
     @ValidFile(message = "Invalid File")
     private MultipartFile contactImage;

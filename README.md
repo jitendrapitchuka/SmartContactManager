@@ -20,7 +20,15 @@ SmartContactManager is a web application designed to save and manage contacts, f
 
 ``` java 
 <th:block th:text="${@sessionHelper.removeMessage()}"></th:block>
+```
 
-@ModelAttribute Annotation: The method annotated with @ModelAttribute is automatically invoked before any request handler methods in the controller. This allows you to add common attributes (like user details) to the Model, making them accessible across different views.
+## @ ModelAttribute Annotation
+ The method annotated with @ModelAttribute is automatically invoked before any request handler methods in the controller. This allows you to add common attributes (like user details) to the Model, making them accessible across different views.
+
+## @ ControllerAdvice Annotation
 
 @ControllerAdvice is a specialized component that allows you to handle exceptions and apply model attributes across multiple controllers in a consistent way. It helps to centralize common logic, such as exception handling and shared data, across all controllers in your application.
+
+
+## Cloudinary:
+Using cloudinary we save image to cloud by using public id . Using this public id we will fetch image url (methodName in code : getUrlFromPublicId)
