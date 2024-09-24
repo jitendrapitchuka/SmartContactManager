@@ -31,12 +31,14 @@ public class Contact {
     private String picture;
     @Column(length = 1000)
     private String description;
-    private Boolean favourite = false;
+    private boolean favourite = false;
 
     private String websiteLink;
     private String linkedInLink;
 
     // private List<String> socialLinks= new ArrayList<>();
+
+    private String cloudinaryImagePublicId;
 
     @ManyToOne
     private User user;

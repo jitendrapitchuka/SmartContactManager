@@ -42,7 +42,7 @@ public class ContactServiceImpl implements ContactService
         contactOld.setAddress(contact.getAddress());
         contactOld.setDescription(contact.getDescription());
         contactOld.setPicture(contact.getPicture());
-        contactOld.setFavorite(contact.isFavorite());
+        contactOld.setFavourite(contact.isFavourite());
         contactOld.setWebsiteLink(contact.getWebsiteLink());
         contactOld.setLinkedInLink(contact.getLinkedInLink());
         contactOld.setCloudinaryImagePublicId(contact.getCloudinaryImagePublicId());
