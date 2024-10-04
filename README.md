@@ -34,3 +34,8 @@ SmartContactManager is a web application designed to save and manage contacts, f
 Using cloudinary we save image to cloud by using public id . Using this public id we will fetch image url (methodName in code : getUrlFromPublicId)
 
 ## Created customed annonation @Validfile
+
+## Used pagination
+
+## findByUserAndNameContaining
+containing means like 
