@@ -36,3 +36,7 @@
 
 ### 9. Custom Finder Method: `findByUserAndNameContaining`
 - The `Containing` keyword in this custom finder method performs a "like" search, allowing partial matches for the `name` field in the database.
+
+### 10 . @JsonIgnore:
+- 
+In Spring Boot, @JsonIgnore is an annotation used to ignore a specific field or property during JSON serialization and deserialization. This means that when an object is converted to JSON (serialization) or JSON is converted to an object (deserialization), the field marked with @JsonIgnore will be omitted. It is often used to hide sensitive information or exclude irrelevant fields.
